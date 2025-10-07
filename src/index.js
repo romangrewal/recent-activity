@@ -116,6 +116,7 @@ Toolkit.run(
       if (!line) {
         return true;
       }
+      tools.log.debug(`${idx}`);
       readmeContent.splice(
         startIdx + idx,
         0,
