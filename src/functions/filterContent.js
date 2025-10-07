@@ -57,7 +57,7 @@ const filterContent = (eventData) => {
 
   for (let i = 0; i < eventData.length; i++) {
     let event_string = serializers[eventData[i].type](eventData[i]);
-
+    console.log(i + " " + event_string);
     if (event_string !== "") {
       temp_content.push(event_string);
     }
