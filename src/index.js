@@ -69,6 +69,8 @@ Toolkit.run(
     if (startIdx !== -1 && endIdx === -1) {
       // Add one since the content needs to be inserted just after the initial comment
       startIdx++;
+      tools.log.debug(`CONTENT LENGTH 1`);
+      tools.log.debug(`${content.length}`);
       content.forEach((line, idx) =>
         readmeContent.splice(
           startIdx + idx,
@@ -107,6 +109,8 @@ Toolkit.run(
       // Remove existing recent activity lines
       readmeContent.splice(startIdx, endIdx - startIdx);
     }
+    tools.log.debug(`CONTENT LENGTH 2`);
+    tools.log.debug(`${content.length}`);
     content.some((line, idx) => {
       // User doesn't have 5 public events
       if (!line) {
