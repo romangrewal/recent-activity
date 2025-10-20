@@ -27,11 +27,11 @@ Toolkit.run(
     });
     tools.log.debug(`${events.data.length} events found for ${username}.`);
 
-    tools.log.debug(`EVENTS:::::::::::::::::::: ${JSON.stringify(events.data)}`);
     let eventData = events.data
       // Filter out any boring activity
       .filter((event) => serializers.hasOwnProperty(event.type));
 
+    tools.log.debug(`EVENTS:::::::::::::::::::: ${JSON.stringify(eventData)}`);
     let content = filterContent(eventData);
 
     let readmeContent;
