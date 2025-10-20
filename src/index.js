@@ -27,7 +27,7 @@ Toolkit.run(
     });
     tools.log.debug(`${events.data.length} events found for ${username}.`);
 
-    tools.log.debug(`EVENTS:::::::::::::::::::: ${events}`);
+    tools.log.debug(`EVENTS:::::::::::::::::::: ${JSON.stringify(events)}`);
     let eventData = events.data
       // Filter out any boring activity
       .filter((event) => serializers.hasOwnProperty(event.type));
