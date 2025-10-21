@@ -70,7 +70,7 @@ const filterContent = (eventData) => {
   temp_content.length = max_lines;
 
   temp_content = temp_content.join("\n\n");
-
+  console.log("TEMP CONTENT===================== " + temp_content);
   temp_content = amountReplace(temp_content).split("\n\n");
 
   console.log(temp_content);
